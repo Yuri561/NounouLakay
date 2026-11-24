@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #20243f;
+  background: #faf8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #ded7f6; color: #20243f; }
+
+@layer components {
+  .container-app { @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10; }
+  .section-pad { @apply py-16 sm:py-20 lg:py-24; }
+  .eyebrow { @apply text-xs font-extrabold uppercase tracking-[.22em] text-violet; }
+  .heading-xl { @apply font-display text-4xl font-extrabold leading-[1.12] tracking-[-.045em] sm:text-5xl lg:text-6xl; }
+  .heading-lg { @apply font-display text-3xl font-extrabold tracking-[-.035em] sm:text-4xl; }
+  .card { @apply rounded-[26px] border border-line bg-white shadow-card; }
+  .field { @apply mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-violet focus:ring-4 focus:ring-violet/10; }
+  .pill { @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold; }
+  .navlink { @apply rounded-xl px-3 py-2 text-sm font-bold text-ink/70 transition hover:bg-lilac hover:text-violet; }
+}
